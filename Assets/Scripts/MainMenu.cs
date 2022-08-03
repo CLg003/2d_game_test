@@ -5,8 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
- public void PlayGame()
+
+    public GameObject OptionsMenu;
+
+    public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void OpenOptionsMenu()
+    {
+        OptionsMenu.SetActive(true);
+    }
+
+    public void Quit()
+    {
+        Debug.Log("Guit Game!");
+        Application.Quit();
     }
 }
